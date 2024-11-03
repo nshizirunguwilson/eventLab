@@ -324,7 +324,7 @@ const eventPlaces = [
 const eventPlacesContainer = document.getElementById('eventPlaces-container');
 eventPlaces.forEach(eventPlace => {
     const eventPlaceHTML = `
-        <div class="card border dark:border-slate-800 hover:shadow-lg hover:shadow-blue-300 dark:hover:shadow-slate-700 group/item cursor-pointer">
+        <div class="card border dark:border-slate-800 rounded-md overflow-hidden hover:shadow-lg hover:shadow-blue-300 dark:hover:shadow-slate-700 group/item cursor-pointer">
             <div class="w-full h-52 overflow-hidden">
                 <img class="w-full h-full object-cover group-hover/item:scale-105" src="${eventPlace.image}" alt="">
             </div>
@@ -481,7 +481,7 @@ const featuredEventsContainer = document.getElementById("featuredEvents");
 
 featuredEvents.forEach(featuredEvent => {
     const featuredEventHTML = `
-        <div class="hover:shadow-lg hover:shadow-blue-300 hover:shadow-slate-700 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
+        <div class="hover:shadow-lg hover:shadow-blue-300 rounded-md overflow-hidden hover:shadow-slate-700 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
             <div class="w-1/2 overflow-hidden">
                 <img class="h-[250px] w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredEvent.image}" alt="">
             </div>
