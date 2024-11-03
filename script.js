@@ -556,7 +556,7 @@ const cityContainer = document.getElementById("cities");
 
 cities.forEach(city => {
     const cityHTML = `
-        <div class=" ${city.class} cursor-pointer group/item overflow-hidden relative">
+        <div class=" ${city.class} cursor-pointer rounded-lg overflow-hidden group/item overflow-hidden relative">
             <img class="w-full h-full object-cover group-hover/item:scale-110" src="${city.image}" alt="">
             <div class=" flex gap-2 items-end p-3 justify-center w-full h-full absolute top-[100%] group-hover/item:top-0 left-0 bg-gradient-to-b from-transparent to-blue-500 dark:to-blue-900">
                 <span class="font-semibold text-lg text-zinc-100">${city.name}</span>
@@ -660,7 +660,7 @@ const featuredOrganizersContainer = document.getElementById("featuredOrganizers"
 
 featuredOrganizers.forEach(featuredOrganizer => {
     const featuredOrganizerHTML = `
-        <div class="w-full h-full hover:shadow-lg dark:hover:shadow-slate-700 hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
+        <div class="w-full h-full hover:shadow-lg rounded-md overflow-hidden dark:hover:shadow-slate-700 hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
             <div class="w-1/2 overflow-hidden m-3">
                 <img class="h-full w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
@@ -745,7 +745,7 @@ const speakerContainer = document.getElementById("speakers");
 
 speakers.forEach(speaker => {
     const speakerHTML = `
-        <div class="border dark:border-slate-800 py-10 hover:shadow-lg overflow-hidden group/item hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer flex flex-col gap-2 items-center justify-center">
+        <div class="border dark:border-slate-800 rounded-md py-10 hover:shadow-lg overflow-hidden group/item hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer flex flex-col gap-2 items-center justify-center">
             <img class="w-28 h-28 rounded-full object-cover" src="${speaker.image}" alt="">
             <p class="font-semibold text-zinc-700 dark:text-zinc-300 text-lg">${speaker.name}</p>
             <p class="font-base text-zinc-500 dark:text-zinc-300">${speaker.title}</p>
@@ -811,7 +811,7 @@ const blogContainer = document.getElementById("blogs");
 
 blogs.forEach(blog => {
     const blogHTML = `
-        <div class="${blog.class} flex gap-3 border dark:border-slate-800 hover:shadow-lg hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer">
+        <div class="${blog.class} flex gap-3 rounded-md overflow-hidden border dark:border-slate-800 hover:shadow-lg hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer">
             <div class="${blog.divImage}">
                 <img class="w-full h-full object-cover" src="${blog.image}" alt="">
             </div>
@@ -864,7 +864,7 @@ const testimonialContainer = document.getElementById("testimonials");
 
 testimonials.forEach(testimonial => {
     const testimonialHTML = `
-        <div class="border bg-white dark:bg-slate-900 dark:border-slate-800 hover:shadow-xl">
+        <div class="border bg-white rounded-md overflow-hidden dark:bg-slate-900 dark:border-slate-800 hover:shadow-xl">
             <div class="border-b dark:border-b-slate-800 py-6 px-8 flex gap-4 items-center relative">
                 <img class="w-11 h-11 rounded-full object-cover" src="${testimonial.image}" alt="">
                 <div>
