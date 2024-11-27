@@ -125,3 +125,43 @@ events.forEach(event => {
 });
 
 swiper.update(); // Update the Swiper instance to recognize new slides
+
+const categories = [
+    {
+        id: 1,
+        name: "All",
+    },
+    {
+        id: 2,
+        name: "Food",
+    },
+    {
+        id: 3,
+        name: "Tech",
+    },
+    {
+        id: 4,
+        name: "Fashion",
+    },
+    {
+        id: 5,
+        name: "Wine",
+    },
+    {
+        id: 6,
+        name: "Gaming",
+    },
+    {
+        id: 7,
+        name: "Cooking",
+    }
+]
+
+const categoriesContainer = document.getElementById('categories-container');
+
+categories.forEach(category => {
+    const categoryHTML = `
+        <button class="text-zinc-700 bg-zinc-200 hover:bg-zinc-300 px-4 py-2 rounded">${category.name}</button>
+    `;
+    categoriesContainer.innerHTML += categoryHTML;
+})
