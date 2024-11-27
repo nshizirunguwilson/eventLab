@@ -19,3 +19,4 @@ function handleLightMode() {
 
     localStorage.setItem("mode", "light");
 }
+
