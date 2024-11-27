@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>EventLab | Your online ticket booking system</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header class="shadow-lg py-3 px-[5%] flex justify-between items-center">
@@ -15,25 +16,31 @@
             <h1 class="font-bold text-xl text-blue-500">EventLab</h1>
             <div class="border p-1 rounded group focus-within:ring-1 focus-within:ring-blue-500">
                 <input class="text-base font-regular text-zinc-700" type="text" placeholder="Type your search...">
-                <i class="fa-solid fa-magnifying-glass border-l hover:cursor-pointer hover:bg-zinc-100 py-2 px-3"></i>
+                <i class="fa-solid fa-magnifying-glass border-l hover:cursor-pointer hover:bg-blue-200 text-blue-500 py-2 px-3"></i>
             </div>
         </div>
-        <div class="flex gap-4 items-center">
-            <div class="flex items-center group/item gap-2 cursor-pointer">
-                <i class="fa-solid fa-house text-blue-600"></i>
-                <span class="text-zinc-700 group-hover/item:underline">Home</span>
+        <div class="flex  items-center gap-8">
+            <div class="flex gap-4 items-center">
+                <div class="flex items-center group/item gap-2 cursor-pointer">
+                    <i class="fa-solid fa-house text-blue-600"></i>
+                    <span class="text-zinc-700 group-hover/item:underline">Home</span>
+                </div>
+                <div class="flex items-center group/item gap-2 cursor-pointer">
+                    <i class="fa-solid fa-heart text-blue-600"></i>
+                    <span class="text-zinc-700 group-hover/item:underline">Favorite</span>
+                </div>
+                <div class="flex items-center group/item gap-2 cursor-pointer">
+                    <i class="fa-solid fa-user text-blue-600"></i>
+                    <span class="text-zinc-700 group-hover/item:underline">Profile</span>
+                </div>
+                <div class="bg-blue-600 text-zinc-100 py-2 px-3 rounded hover:bg-blue-500 cursor-pointer">
+                    <span>Buy Tickets</span>
+                    <i class="fa-solid fa-ticket rotate-90"></i>
+                </div>
             </div>
-            <div class="flex items-center group/item gap-2 cursor-pointer">
-                <i class="fa-solid fa-heart text-blue-600"></i>
-                <span class="text-zinc-700 group-hover/item:underline">Favorite</span>
-            </div>
-            <div class="flex items-center group/item gap-2 cursor-pointer">
-                <i class="fa-solid fa-user text-blue-600"></i>
-                <span class="text-zinc-700 group-hover/item:underline">Profile</span>
-            </div>
-            <div class="bg-blue-600 text-zinc-100 py-2 px-3 rounded hover:bg-blue-500 cursor-pointer">
-                <span>Buy Tickets</span>
-                <i class="fa-solid fa-ticket rotate-90"></i>
+            <div class="w-6 overflow-hidden">
+                <i onclick="handleDarkMode()" id="moon" class="fa-solid fa-moon text-blue-600 text-2xl cursor-pointer"></i>
+                <i onclick="handleLightMode()" id="sun" class="fa-solid fa-sun hidden text-blue-600 text-2xl cursor-pointer slide"></i>
             </div>
         </div>
     </header>
