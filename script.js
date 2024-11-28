@@ -393,3 +393,42 @@ how.forEach(how => {
     `;
     works.innerHTML += workHTML;
 })
+
+const featuredEvents = [
+    {
+        id: 1,
+        image: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/rail/Inidias-Fabled-Rajasthan-by-Rail/Hero-india-fabled.jpg.adapt.nineteen-hundred.jpg",
+        title: "World Wine Congress",
+        date: "Mon 1 Jul 2024 - Wed 3 Jul 2024",
+        location: "Bordeaux, France",
+        price: "free",
+        organizer: "Info Connect"
+    },
+    {
+        id: 2,
+        image: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/land/estonia-lithuania-latvia-enchanted-forests-medieval-castles/estonia-lithuania-latvia-baltics-hero.jpg.adapt.nineteen-hundred.jpg",
+        title: "E-sports Live Event",
+        date: "Fri 6 Sep 2024 - Sun 8 Sep 2024",
+        location: "Los Angeles, USA",
+        price: "free",
+        organizer: "ESports World"
+    },
+    {
+        id: 3,
+        image: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/active/Alpe-Adria-trail/hero-alpe-adria.jpg.adapt.nineteen-hundred.jpg",
+        title: "International Food Fiesta",
+        date: "Fri 2 Aug 2024 - Sun 2 Aug 2019",
+        location: "Dubai, UAE",
+        price: "$150",
+        organizer: "Food & Drink Events"
+    },
+    {
+        id: 4,
+        image: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/land/Bhutan-Land-of-Mysticism-Mythology/bhutan-mysticism-mythology-hero.jpg.adapt.nineteen-hundred.jpg",
+        title: "Alaska Expedition",
+        date: "Fri 12 May 2024 - Sun 14 May 2024",
+        location: "Anchorage, Alaska, USA",
+        price: "free",
+        organizer: "Alaska Adventure"
+    }
+]
