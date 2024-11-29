@@ -702,3 +702,65 @@ const speakers = [
         title: "UX/UI Designer"
     }
 ]
+
+const speakerContainer = document.getElementById("speakers");
+
+speakers.forEach(speaker => {
+    const speakerHTML = `
+        <div class="border py-10 hover:shadow-lg overflow-hidden group/item hover:bg-blue-50 cursor-pointer flex flex-col gap-2 items-center justify-center">
+            <img class="w-28 h-28 rounded-full object-cover" src="${speaker.image}" alt="">
+            <p class="font-semibold text-zinc-700 text-lg">${speaker.name}</p>
+            <p class="font-base text-zinc-500">${speaker.title}</p>
+            <div class="flex gap-2 transform translate-y-[4.5rem] group-hover/item:-translate-y-0">
+                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-whatsapp"></i>\
+                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-instagram"></i>
+                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-x-twitter"></i>
+                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+    `;
+    speakerContainer.innerHTML += speakerHTML;
+});
+
+const blogs = [
+    {
+        id: 1,
+        title: "The Impact of AI on Our Workplace",
+        subtitle: "The Impact of AI on Our Workplace is a very important topic of our work place development process",
+        image: "https://media.istockphoto.com/id/1518657698/photo/the-impact-of-ai-on-jobs-fired-business-people-leaving-the-office.jpg?s=612x612&w=0&k=20&c=VznDZ8eDO6aOfXl8iyGxdxCjeoAJfw8sFyesDlSJrrA=",
+        author: "John Doe",
+        authorImage: "https://media.istockphoto.com/id/1358152477/photo/portrait-of-smiling-african-handsome-raising-head-in-grey-background.jpg?s=612x612&w=0&k=20&c=eVKtSB0X-dcD1FL73cWl0fQUp5x8kda6BgQk_0lYE0s=",
+        date: "July 15, 2022",
+        class: "row-span-2"
+    },
+    {
+        id: 2,
+        title: "The Future of AI in Education",
+        subtitle: "The Future of AI in Education is a very important topic of our work place development process",
+        image: "https://media.istockphoto.com/id/2180716142/photo/kids-engaging-with-digital-chat-on-shared-laptop-ai-chatbot-conversation-ai-artificial.jpg?s=612x612&w=0&k=20&c=4DLumEYeVBabOlMZe1-tnyhVkMqcaSkSVKqJIxdxGNk=",
+        author: "Jane Smith",
+        authorImage: "https://media.istockphoto.com/id/1504549447/photo/portrait-of-a-serious-black-woman.jpg?s=612x612&w=0&k=20&c=susF6aBnwFUpGGsIWJqEYfFnMgPYMVo_CyU2B6BjlxI=",
+        date: "July 10, 2022",
+        class: ""
+    },
+    {
+        id: 3,
+        title: "The Evolution of AI in Healthcare",
+        subtitle: "The Evolution of AI in Healthcare is a very important topic of our work place development process",
+        image: "https://media.istockphoto.com/id/1489956013/photo/medical-technology-ai-technology-is-utilized-by-doctors-for-diagnosing-increasing-the.jpg?s=612x612&w=0&k=20&c=kB9Jwz3S8XFiQO-dSkwGB1IUdbR_ouLjRUKKLPFKj9Y=",
+        author: "Bob Johnson",
+        authorImage: "https://media.istockphoto.com/id/1152801700/photo/portrait-of-a-african-man-on-white-backgroud.jpg?s=612x612&w=0&k=20&c=jctE__JrMDY-RE_v8cLxZFxIpWmQkYn2k939mfdY_KI=",
+        date: "July 5, 2022",
+        class: ""
+    },
+    {
+        id: 4,
+        title: "The Impact of AI on Our Society",
+        subtitle: "The Impact of AI on Our Society is a very important topic of our work place development process",
+        image: "https://media.istockphoto.com/id/1210902669/photo/smart-city-and-communication-network-concept-5g-lpwa-wireless-communication.jpg?s=612x612&w=0&k=20&c=ayB3NY-r4BIjX3q19_xFpOsLZtLPcgYyrvR5tkOXlLg=",
+        author: "Emily Thompson",
+        authorImage: "https://media.istockphoto.com/id/667392092/photo/concentrated-attractive-young-woman.jpg?s=612x612&w=0&k=20&c=we0XYCQvsYDJ_HptN9BUr-tYozwTVRwuHIBG2J4N9n0=",
+        date: "July 2, 2022",
+        class: ""
+    }
+]
