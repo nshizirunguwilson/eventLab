@@ -479,4 +479,50 @@ featuredEvents.forEach(featuredEvent => {
         </div>
         `;
     featuredEventsContainer.innerHTML += featuredEventHTML;
-})
+});
+
+const cities = [
+    {
+        id: 1,
+        name: "New York",
+        image: "https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/shutterstock_329662223_ss_non-editorial_3_csm8lw?_a=BAVARSDW0",
+        events: "06 Events",
+        class: "col-span-2 row-span-2"
+    },
+    {
+        id: 2,
+        name: "London",
+        image: "https://images.squarespace-cdn.com/content/v1/6397e1ebbb148c2e8ac0b037/28bd2e1a-71d4-4dbf-b8a9-b34bdee409a8/London_1_2019-4508.jpg",
+        events: "12 Events",
+        class: "h-[250px] col-span-2"
+    },
+    {
+        id: 3,
+        name: "Paris",
+        image: "https://paristickets.tours/wp-content/uploads/2022/09/paris-at-spring.jpg",
+        events: "10 Events",
+        class: "h-[250px]"
+    },
+    {
+        id: 4,
+        name: "Tokyo",
+        image: "https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg",
+        events: "04 Events",
+        class: "h-[250px]"
+    }
+]
+
+const cityContainer = document.getElementById("cities");
+
+cities.forEach(city => {
+    const cityHTML = `
+        <div class=" ${city.class} cursor-pointer group/item overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover/item:scale-110" src="${city.image}" alt="">
+            <div class=" flex gap-2 items-end p-3 justify-center w-full h-full absolute top-[100%] group-hover/item:top-0 left-0 bg-gradient-to-b from-transparent to-blue-500">
+                <span class="font-semibold text-lg text-zinc-100">${city.name}</span>
+                <p class="text-zinc-200">${city.events}</p>
+            </div>
+        </div>
+        `;
+    cityContainer.innerHTML += cityHTML;
+});
