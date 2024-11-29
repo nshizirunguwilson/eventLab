@@ -578,42 +578,42 @@ const featuredOrganizers = [
     {
         id: 1, 
         title: "The healthCare center",
-        image: "https://www.healthcare.com/wp-content/uploads/2020/12/New-York-City-Healthcare-Center-2.jpg",
+        image: "https://carrumhealth.com/wp-content/uploads/2024/01/center-of-excellence.jpg",
         events: "16 events",
         address: "NewYork"
     },
     {
         id: 2, 
-        title: "The art museum of the University",
-        image: "https://www.artmuseum.org/wp-content/uploads/2019/09/London-Art-Museum-1.jpg",
+        title: "Tech Innovators Collective",
+        image: "https://cms.afrotech.com/wp-content/uploads/2024/03/GoogleTECxAT_header.png",
         events: "10 events",
         address: "London"
     },
     {
         id: 3, 
-        title: "The fashion show is available",
-        image: "https://www.fashionweek.com/sites/default/files/styles/large/public/2022/05/2022-05-23_14-04-58_20220523_140458_1080x607.jpg?itok=66lQ9n7L",
+        title: "Bridal shower decoration",
+        image: "https://www.tamarindglobal.com/images/events/events.jpg",
         events: "20 events",
         address: "Paris"
     },
     {
         id: 4, 
-        title: "Our Website is Here",
-        image: "https://www.lifestyle.com/thmb/8j6U-eQ7n7yJ-2j56jYv84p-J34W-e4v-QF_Q11-l-1200x630.jpg",
+        title: "Wedding Events decoration",
+        image: "https://www.simplybusiness.co.uk/wp-content/uploads/sites/3/2024/06/how-to-become-an-event-organiser-uk.jpg",
         events: "12 events",
         address: "Tokyo"
     },
     {
         id: 5, 
         title: "The café Project is opening",
-        image: "https://www.thecafeteria.com/wp-content/uploads/2021/07/Cafeteria-in-New-York-City-1.jpg",
+        image: "https://perfectdailygrind.com/wp-content/uploads/2017/03/t3-e1488947445695.jpg",
         events: "18 events",
         address: "New York"
     },
     {
         id: 6, 
         title: "The gym",
-        image: "https://www.bodybuilding.com/images/articles/fitness-center-gym-3.jpg",
+        image: "https://www.ezfacility.com/wp-content/uploads/2019/08/gym-event-ideas.jpg",
         events: "25 events",
         address: "London"
     }
@@ -622,20 +622,20 @@ const featuredOrganizersContainer = document.getElementById("featuredOrganizers"
 
 featuredOrganizers.forEach(featuredOrganizer => {
     const featuredOrganizerHTML = `
-        <div class="hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
+        <div class="w-full h-full hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
             <div class="w-1/2 overflow-hidden m-3">
-                <img class="h-full object-cover w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg" alt="">
+                <img class="h-full object-cover w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
             <div class="w-1/2 pt-3 pr-3 pl-3 flex flex-col justify-between">
                 <div class="content flex flex-col gap-2">
-                    <p class="font-semibold text-zinc-600 text-[20px]">Some random title</p>
+                    <p class="font-semibold text-zinc-600 text-[20px]">${featuredOrganizer.title}</p>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-calendar-days text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">events</p>
+                        <p class="text-[14px] text-zinc-600">${featuredOrganizer.events}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-location-dot text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">location</p>
+                        <p class="text-[14px] text-zinc-600">${featuredOrganizer.address}</p>
                     </div>
                 </div>
                 <div class="organizer border-t flex gap-3 items-center py-3">
