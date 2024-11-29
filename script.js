@@ -651,3 +651,54 @@ featuredOrganizers.forEach(featuredOrganizer => {
     `;
     featuredOrganizersContainer.innerHTML += featuredOrganizerHTML;
 });
+
+const speakers = [
+    {
+        id: 1,
+        name: "John Doe",
+        image: "https://media.istockphoto.com/id/1046045698/photo/smiling-young-man.jpg?s=612x612&w=0&k=20&c=Z8nSAa5e7-UrOtFGJYvKGjEgmlADiTXqDYT1_cmtthI=",
+        title: "Developer"
+    },
+    {
+        id: 2,
+        name: "Jane Smith",
+        image: "https://media.istockphoto.com/id/2033799615/photo/purposeful-black-woman-wearing-blue-shirt-and-round-eyeglasses-and-standing-wit-folded-on.jpg?s=612x612&w=0&k=20&c=h7ZgcEmE4NZONycORzNg62n6Npdo782b68FY7j0yRP8=",
+        title: "Designer"
+    },
+    {
+        id: 3,
+        name: "Bob Johnson",
+        image: "https://media.istockphoto.com/id/1351147761/photo/studio-portrait-of-attractive-20-year-old-bearded-man.jpg?s=612x612&w=0&k=20&c=nwIeR-YpSGNessrkAAbIdYMK2AdfEdihxEoAMYfPyA4=",
+        title: "Marketing"
+    },
+    {
+        id: 4,
+        name: "Emily Davis",
+        image: "https://media.istockphoto.com/id/522189205/photo/its-all-good.jpg?s=612x612&w=0&k=20&c=8sMw67iXtNZA3Ln5uovpX6NwwrgPMXKbBvTpJPj-zn4=",
+        title: "Product Manager"
+    },
+    {
+        id: 5,
+        name: "David Wilson",
+        image: "https://media.istockphoto.com/id/1333101714/photo/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated.jpg?s=612x612&w=0&k=20&c=HlbGbUI1VeQVHYgcVOS3OhlG5tryu59AkUiy4DQDrKs=",
+        title: "Data Scientist"
+    },
+    {
+        id: 6,
+        name: "Sarah Thompson",
+        image: "https://media.istockphoto.com/id/972911912/photo/portrait-of-serious-woman.jpg?s=612x612&w=0&k=20&c=k78tPi1arYBFW3JdgPurD6BK8qLQhG3ElmlZFKXgTTA=",
+        title: "QA Engineer"
+    },
+    {
+        id: 7,
+        name: "Michael Lee",
+        image: "https://media.istockphoto.com/id/879613556/photo/young-bearded-handsome-indian-man-wearing-traditional-clothing-against-gray-background.jpg?s=612x612&w=0&k=20&c=bPMbad8oPtS5dHyiLYpDn59gSVeXQEQ_jNari-tO39I=",
+        title: "Project Manager"
+    },
+    {
+        id: 8,
+        name: "Karen Brown",
+        image: "https://media.istockphoto.com/id/968432068/photo/handsome-confident-businessman.jpg?s=612x612&w=0&k=20&c=MzDT0rAzPcPrhorEUoiJIOVFb0w2oL4icvVJLDzYP_8=",
+        title: "UX/UI Designer"
+    }
+]
