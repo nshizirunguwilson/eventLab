@@ -626,9 +626,9 @@ featuredOrganizers.forEach(featuredOrganizer => {
             <div class="w-1/2 overflow-hidden m-3">
                 <img class="h-full object-cover w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
-            <div class="w-1/2 pt-3 pr-3 pl-3 flex flex-col justify-between">
-                <div class="content flex flex-col gap-2">
-                    <p class="font-semibold text-zinc-600 text-[20px]">${featuredOrganizer.title}</p>
+            <div class="w-1/2 pt-2 pr-2 pl-2 flex flex-col justify-between">
+                <div class="content flex flex-col gap-1">
+                    <p class="font-semibold text-zinc-600 text-[17px]">${featuredOrganizer.title}</p>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-calendar-days text-blue-600"></i>
                         <p class="text-[14px] text-zinc-600">${featuredOrganizer.events}</p>
@@ -638,7 +638,7 @@ featuredOrganizers.forEach(featuredOrganizer => {
                         <p class="text-[14px] text-zinc-600">${featuredOrganizer.address}</p>
                     </div>
                 </div>
-                <div class="organizer border-t flex gap-3 items-center py-3">
+                <div class="organizer border-t flex gap-3 items-center py-1">
                     <div class="w-10 h-10 border flex items-center justify-center rounded-full">
                         <i class="fa-solid fa-upload text-blue-500"></i>
                     </div>
@@ -796,4 +796,56 @@ blogs.forEach(blog => {
         </div>
     `;
     blogContainer.innerHTML += blogHTML;
+});
+
+const testimonials = [
+    {
+        id: 1,
+        name: "John Doe",
+        title: "CEO, ABC Company",
+        image: "https://media.istockphoto.com/id/1540210279/photo/efficient-factory-management-portrait-of-smiling-senior-manager-businessman-or-ceo-in.jpg?s=612x612&w=0&k=20&c=4CvpYkXRzf5eyotS3kPMxtLHt7brL1KC-B5N0ei-Ieg=",
+        testimonial: "EventLab made booking tickets seamless and stress-free! The intuitive interface, instant confirmation saved me so much time."
+    },
+    {
+        id: 2,
+        name: "Jane Smith",
+        title: "Product Manager",
+        image: "https://media.istockphoto.com/id/1824226141/photo/happy-woman-portrait-and-small-business-professional-in-logistics-supply-chain-or-fashion.jpg?s=612x612&w=0&k=20&c=dCXUtI1NpfZHVucEQxEwc6Y4jyU4dIorm8Qn_niCnSI=",
+        testimonial: "EventLab's AI-powered features made planning events more efficient and enjoyable."
+    },
+    {
+        id: 3,
+        name: "Bob Johnson",
+        title: "Software Engineer",
+        image: "https://media.istockphoto.com/id/1536191188/photo/web-developers-using-a-computer-together-in-an-office.jpg?s=612x612&w=0&k=20&c=MqBrIeX_itBLU7pr5d3rQ7ZrB6_mzJ_ZSEbb4ONfkiQ=",
+        testimonial: "EventLab's AI-powered features made booking tickets seamless and stress-free. The intuitive interface, instant confirmation saved me so much time."
+    }
+]
+
+const testimonialContainer = document.getElementById("testimonials");
+
+testimonials.forEach(testimonial => {
+    const testimonialHTML = `
+        <div class="border bg-white hover:shadow-xl">
+            <div class="border-b py-6 px-8 flex gap-4 items-center relative">
+                <img class="w-11 h-11 rounded-full object-cover" src="${testimonial.image}" alt="">
+                <div>
+                    <p class="font-semibold text-lg text-zinc-600">${testimonial.name}</p>
+                    <p class="text-zinc-500 font-regular">${testimonial.title}</p>
+                </div>
+                <i class="absolute right-[20%] bottom-[-17px] text-blue-500 text-3xl fa-solid fa-quote-right"></i>
+            </div>
+            <div class="p-8 flex flex-col gap-3">
+                <div>
+                    <i class=" text-blue-500 fa-solid fa-star"></i>
+                    <i class=" text-blue-500 fa-solid fa-star"></i>
+                    <i class=" text-blue-500 fa-solid fa-star"></i>
+                    <i class=" text-blue-500 fa-solid fa-star"></i>
+                    <i class=" text-blue-500 fa-solid fa-star"></i>
+                </div>
+                <p class="text-base text-zinc-500">${testimonial.testimonial}</p>
+            </div>
+        </div>
+    `;
+    testimonialContainer.innerHTML += testimonialHTML;
 });
