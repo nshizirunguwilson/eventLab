@@ -402,6 +402,7 @@ const featuredEvents = [
         date: "Mon 1 Jul 2024 - Wed 3 Jul 2024",
         location: "Bordeaux, France",
         price: "free",
+        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
         organizer: "Info Connect"
     },
     {
@@ -411,6 +412,7 @@ const featuredEvents = [
         date: "Fri 6 Sep 2024 - Sun 8 Sep 2024",
         location: "Los Angeles, USA",
         price: "free",
+        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
         organizer: "ESports World"
     },
     {
@@ -420,6 +422,7 @@ const featuredEvents = [
         date: "Fri 2 Aug 2024 - Sun 2 Aug 2019",
         location: "Dubai, UAE",
         price: "$150",
+        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
         organizer: "Food & Drink Events"
     },
     {
@@ -429,6 +432,7 @@ const featuredEvents = [
         date: "Fri 12 May 2024 - Sun 14 May 2024",
         location: "Anchorage, Alaska, USA",
         price: "free",
+        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
         organizer: "Alaska Adventure"
     }
 ]
