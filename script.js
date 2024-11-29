@@ -30,6 +30,8 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 8,
     spaceBetween: 20,
 });
+
+
 const events = [
     {
         id: 1,
@@ -526,3 +528,48 @@ cities.forEach(city => {
         `;
     cityContainer.innerHTML += cityHTML;
 });
+
+
+const organizers = [
+    {
+        id: 1,
+        name: "All",
+    },
+    {
+        id: 2,
+        name: "Music",
+    },
+    {
+        id: 3,
+        name: "Visual Arts",
+    },
+    {
+        id: 4,
+        name: "Holiday",
+    },
+    {
+        id: 5,
+        name: "Health",
+    },
+    {
+        id: 6,
+        name: "Hobbies",
+    },
+    {
+        id: 7,
+        name: "Food",
+    },
+    {
+        id: 8,
+        name: "Fitness",
+    }
+]
+
+const organizersContainer = document.getElementById('organizers-container');
+
+organizers.forEach(organizer => {
+    const organizerHTML = `
+        <button class="text-zinc-700 bg-zinc-200 hover:bg-blue-500 hover:text-zinc-200 px-4 py-2 rounded">${organizer.name}</button>
+    `;
+    organizersContainer.innerHTML += organizerHTML;
+})
