@@ -731,7 +731,8 @@ const blogs = [
         author: "John Doe",
         authorImage: "https://media.istockphoto.com/id/1358152477/photo/portrait-of-smiling-african-handsome-raising-head-in-grey-background.jpg?s=612x612&w=0&k=20&c=eVKtSB0X-dcD1FL73cWl0fQUp5x8kda6BgQk_0lYE0s=",
         date: "July 15, 2022",
-        class: "row-span-2"
+        class: "row-span-3 flex-col",
+        divImage: "w-full"
     },
     {
         id: 2,
@@ -741,7 +742,8 @@ const blogs = [
         author: "Jane Smith",
         authorImage: "https://media.istockphoto.com/id/1504549447/photo/portrait-of-a-serious-black-woman.jpg?s=612x612&w=0&k=20&c=susF6aBnwFUpGGsIWJqEYfFnMgPYMVo_CyU2B6BjlxI=",
         date: "July 10, 2022",
-        class: ""
+        class: "",
+        divImage: "w-4/5"
     },
     {
         id: 3,
@@ -751,7 +753,8 @@ const blogs = [
         author: "Bob Johnson",
         authorImage: "https://media.istockphoto.com/id/1152801700/photo/portrait-of-a-african-man-on-white-backgroud.jpg?s=612x612&w=0&k=20&c=jctE__JrMDY-RE_v8cLxZFxIpWmQkYn2k939mfdY_KI=",
         date: "July 5, 2022",
-        class: ""
+        class: "",
+        divImage: "w-4/5"
     },
     {
         id: 4,
@@ -761,6 +764,36 @@ const blogs = [
         author: "Emily Thompson",
         authorImage: "https://media.istockphoto.com/id/667392092/photo/concentrated-attractive-young-woman.jpg?s=612x612&w=0&k=20&c=we0XYCQvsYDJ_HptN9BUr-tYozwTVRwuHIBG2J4N9n0=",
         date: "July 2, 2022",
-        class: ""
+        class: "",
+        divImage: "w-4/5"
     }
 ]
+
+const blogContainer = document.getElementById("blogs");
+
+blogs.forEach(blog => {
+    const blogHTML = `
+        <div class="${blog.class} flex gap-3 border hover:shadow-lg hover:bg-blue-50 cursor-pointer">
+            <div class="${blog.divImage}">
+                <img class="w-full h-full object-cover" src="${blog.image}" alt="">
+            </div>
+            <div class="p-3 flex flex-col justify-between h-full gap-2">
+                <div class="flex flex-col gap-2">
+                    <p class="font-semibold text-zinc-700 text-lg">${blog.title}</p>
+                    <p class="text-base text-zinc-600">${blog.subtitle}</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <div class="flex gap-2 items-center">
+                        <img class="w-6 h-6 rounded-full object-cover" src="${blog.authorImage}" alt="">
+                        <p class="text-zinc-600">${blog.author}</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <i class="text-blue-600 fa-solid fa-magnifying-glass"></i>
+                        <p class="text-zinc-600">${blog.date}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    blogContainer.innerHTML += blogHTML;
+});
