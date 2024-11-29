@@ -402,7 +402,7 @@ const featuredEvents = [
         date: "Mon 1 Jul 2024 - Wed 3 Jul 2024",
         location: "Bordeaux, France",
         price: "free",
-        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
+        organizerProfile: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/rail/Inidias-Fabled-Rajasthan-by-Rail/Hero-india-fabled.jpg.adapt.nineteen-hundred.jpg",
         organizer: "Info Connect"
     },
     {
@@ -412,7 +412,7 @@ const featuredEvents = [
         date: "Fri 6 Sep 2024 - Sun 8 Sep 2024",
         location: "Los Angeles, USA",
         price: "free",
-        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
+        organizerProfile: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/land/estonia-lithuania-latvia-enchanted-forests-medieval-castles/estonia-lithuania-latvia-baltics-hero.jpg.adapt.nineteen-hundred.jpg",
         organizer: "ESports World"
     },
     {
@@ -422,7 +422,7 @@ const featuredEvents = [
         date: "Fri 2 Aug 2024 - Sun 2 Aug 2019",
         location: "Dubai, UAE",
         price: "$150",
-        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
+        organizerProfile: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/active/Alpe-Adria-trail/hero-alpe-adria.jpg.adapt.nineteen-hundred.jpg",
         organizer: "Food & Drink Events"
     },
     {
@@ -432,7 +432,51 @@ const featuredEvents = [
         date: "Fri 12 May 2024 - Sun 14 May 2024",
         location: "Anchorage, Alaska, USA",
         price: "free",
-        organizerProfile: "https://services.afrinnovators.com/wp-content/uploads/2022/08/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png",
+        organizerProfile: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/asia/land/Bhutan-Land-of-Mysticism-Mythology/bhutan-mysticism-mythology-hero.jpg.adapt.nineteen-hundred.jpg",
         organizer: "Alaska Adventure"
     }
 ]
+
+const featuredEventsContainer = document.getElementById("featuredEvents");
+
+featuredEvents.forEach(featuredEvent => {
+    const featuredEventHTML = `
+        <div class="hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
+            <div class="w-1/2 overflow-hidden">
+                <img class="h-[250px] w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredEvent.image}" alt="">
+            </div>
+            <div class="w-1/2 pt-4 pr-4 pl-4 flex flex-col justify-between">
+                <div class="content flex flex-col gap-2">
+                    <p class="font-semibold text-zinc-600 text-[20px]">${featuredEvent.title}</p>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-calendar-days text-blue-600"></i>
+                        <p class="text-[14px] text-zinc-600">${featuredEvent.date}</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-location-dot text-blue-600"></i>
+                        <p class="text-[14px] text-zinc-600">${featuredEvent.location}</p>
+                    </div>
+                    <p class="font-semibold text-zinc-700 uppercase">${featuredEvent.price}</p>
+                </div>
+                <div class="organizer border-t flex justify-between items-center py-2">
+                    <div class="info flex gap-2 items-center">
+                        <img class="w-8 object-cover h-8 rounded-full" src="${featuredEvent.organizerProfile}" alt="">
+                        <div>
+                            <p class="text-[14px] text-zinc-500">Organized by</p>
+                            <p class="text-[15px] text-zinc-700 font-medium">${featuredEvent.organizer}</p>
+                        </div>
+                    </div>
+                    <div class="icons flex gap-3">
+                        <div class="w-10 h-10 border flex items-center justify-center rounded-full">
+                            <i class="fa-solid fa-upload text-blue-500"></i>
+                        </div>
+                        <div class="w-10 h-10 border flex items-center justify-center rounded-full">
+                            <i class="fa-regular fa-heart text-blue-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    featuredEventsContainer.innerHTML += featuredEventHTML;
+})
