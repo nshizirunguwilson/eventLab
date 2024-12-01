@@ -158,7 +158,7 @@ events.forEach(event => {
                         <i class="fa-solid fa-up-right-and-down-left-from-center text-white"></i>
                     </div>
                 </div>
-                <p class="group-hover/item:text-blue-600 text-center">${event.title}</p>
+                <p class="group-hover/item:text-blue-600 dark:text-zinc-300 text-center">${event.title}</p>
             </div>
         `;
     eventsContainer.innerHTML += eventHTML;
@@ -201,7 +201,7 @@ const categoriesContainer = document.getElementById('categories-container');
 
 categories.forEach(category => {
     const categoryHTML = `
-        <button class="text-zinc-700 bg-zinc-200 hover:bg-blue-500 hover:text-zinc-200 px-4 py-2 rounded">${category.name}</button>
+        <button class="text-zinc-700 dark:text-zinc-300 bg-zinc-200 dark:bg-slate-700 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-zinc-200 px-4 py-2 rounded">${category.name}</button>
     `;
     categoriesContainer.innerHTML += categoryHTML;
 })
@@ -324,19 +324,19 @@ const eventPlaces = [
 const eventPlacesContainer = document.getElementById('eventPlaces-container');
 eventPlaces.forEach(eventPlace => {
     const eventPlaceHTML = `
-        <div class="card border hover:shadow-lg hover:shadow-blue-300 group/item cursor-pointer">
+        <div class="card border dark:border-slate-600 hover:shadow-lg hover:shadow-blue-300 dark:hover:shadow-slate-700 group/item cursor-pointer">
             <div class="w-full h-52 overflow-hidden">
                 <img class="w-full h-full object-cover group-hover/item:scale-105" src="${eventPlace.image}" alt="">
             </div>
             <div class="p-4 flex flex-col gap-2">
-                <p class="font-semibold text-zinc-600">${eventPlace.title}</p>
+                <p class="font-semibold text-zinc-600 dark:text-zinc-300">${eventPlace.title}</p>
                 <span class="flex gap-2 items-center">
                     <i class="fa-solid fa-calendar-days text-blue-600"></i>
-                    <p class="text-zinc-700">${eventPlace.date}</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">${eventPlace.date}</p>
                 </span>
                 <span class="flex gap-2 items-center">
                     <i class="fa-solid fa-location-dot text-blue-600"></i>
-                    <p class="text-zinc-700">${eventPlace.location}</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">${eventPlace.location}</p>
                 </span>
                 <div class="flex justify-between items-center mt-3">
                     <p class="text-lg font-semibold text-blue-500">${eventPlace.category}</p>
