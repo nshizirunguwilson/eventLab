@@ -1,24 +1,15 @@
-function handleDarkMode() {
-    const moonIcon = document.getElementById("moon");
-    const sunIcon = document.getElementById("sun");
+// icons
+const moonIcon = document.getElementById("moon");
+const sunIcon = document.getElementById("sun");
 
-    // Switch visibility
-    moonIcon.classList.add("hidden");
-    sunIcon.classList.remove("hidden");
+// theme variables
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    localStorage.setItem("mode", "dark")
-}
+// 
 
-function handleLightMode() {
-    const moonIcon = document.getElementById("moon");
-    const sunIcon = document.getElementById("sun");
-    
-    // Switch visibility
-    sunIcon.classList.add("hidden");
-    moonIcon.classList.remove("hidden");
 
-    localStorage.setItem("mode", "light");
-}
+
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
