@@ -8,18 +8,18 @@ const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 // icon toggling
 const iconToggle = () => {
-    moonIcon.classList.toggle("display-none");
-    sunIcon.classList.toggle("display-none");
+    moonIcon.classList.toggle("hidden");
+    sunIcon.classList.toggle("hidden");
 }
 
 // initial theme check
 const themCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
-        moonIcon.classList.add("display-none");
+        moonIcon.classList.add("hidden");
         return;
     }
-    sunIcon.classList.add("display-none");
+    sunIcon.classList.add("hidden");
 }
 
 // manual theme switch
