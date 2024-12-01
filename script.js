@@ -6,10 +6,46 @@ const sunIcon = document.getElementById("sun");
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// 
+// icon toggling
+const iconToggle = () => {
+    moonIcon.classList.toggle("display-none");
+    sunIcon.classList.toggle("display-none");
+}
 
+// initial theme check
+const themCheck = () => {
+    if (userTheme === "dark" || (!userTheme && systemTheme)) {
+        document.documentElement.classList.add("dark");
+        moonIcon.classList.add("display-none");
+        return;
+    }
+    sunIcon.classList.add("display-none");
+}
 
+// manual theme switch
+const themeSwitch = () => {
+    if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        iconToggle();
+        return;
+    }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    iconToggle();
+}
 
+// call theme switch on clicking buttons
+sunIcon.addEventListener("click", () => {
+    themeSwitch();
+});
+
+moonIcon.addEventListener("click", () => {
+    themeSwitch();
+});
+
+// invoke theme-switch on initial load
+themCheck();
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -335,7 +371,7 @@ eventPlatforms.forEach(eventPlatform => {
         <div class="border rounded-md p-8 flex gap-2 items-center justify-center">
             <i class="${eventPlatform.icon} text-5xl text-blue-500"></i>
             <div>
-                <p class="text-xl text-zinc-700 font-bold text-3xl">${eventPlatform.amount}</p>
+                <p class="text-zinc-700 font-bold text-3xl">${eventPlatform.amount}</p>
                 <p class="text-sm text-zinc-500">${eventPlatform.description}</p>
             </div>
         </div>
@@ -615,7 +651,7 @@ featuredOrganizers.forEach(featuredOrganizer => {
     const featuredOrganizerHTML = `
         <div class="w-full h-full hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
             <div class="w-1/2 overflow-hidden m-3">
-                <img class="h-full object-cover w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
+                <img class="h-full w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
             <div class="w-1/2 pt-2 pr-2 pl-2 flex flex-col justify-between">
                 <div class="content flex flex-col gap-1">
