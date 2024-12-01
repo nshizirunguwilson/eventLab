@@ -745,15 +745,15 @@ const speakerContainer = document.getElementById("speakers");
 
 speakers.forEach(speaker => {
     const speakerHTML = `
-        <div class="border py-10 hover:shadow-lg overflow-hidden group/item hover:bg-blue-50 cursor-pointer flex flex-col gap-2 items-center justify-center">
+        <div class="border dark:border-slate-600 py-10 hover:shadow-lg overflow-hidden group/item hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer flex flex-col gap-2 items-center justify-center">
             <img class="w-28 h-28 rounded-full object-cover" src="${speaker.image}" alt="">
-            <p class="font-semibold text-zinc-700 text-lg">${speaker.name}</p>
-            <p class="font-base text-zinc-500">${speaker.title}</p>
+            <p class="font-semibold text-zinc-700 dark:text-zinc-300 text-lg">${speaker.name}</p>
+            <p class="font-base text-zinc-500 dark:text-zinc-300">${speaker.title}</p>
             <div class="flex gap-2 transform translate-y-[4.5rem] group-hover/item:-translate-y-0">
-                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-whatsapp"></i>
-                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-instagram"></i>
-                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-x-twitter"></i>
-                <i class="text-xl text-zinc-700 hover:text-blue-500 fa-brands fa-linkedin-in"></i>
+                <i class="text-xl text-zinc-700 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-500 fa-brands fa-whatsapp"></i>
+                <i class="text-xl text-zinc-700 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-500 fa-brands fa-instagram"></i>
+                <i class="text-xl text-zinc-700 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-500 fa-brands fa-x-twitter"></i>
+                <i class="text-xl text-zinc-700 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-500 fa-brands fa-linkedin-in"></i>
             </div>
         </div>
     `;
@@ -811,23 +811,23 @@ const blogContainer = document.getElementById("blogs");
 
 blogs.forEach(blog => {
     const blogHTML = `
-        <div class="${blog.class} flex gap-3 border hover:shadow-lg hover:bg-blue-50 cursor-pointer">
+        <div class="${blog.class} flex gap-3 border dark:border-slate-600 hover:shadow-lg hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer">
             <div class="${blog.divImage}">
                 <img class="w-full h-full object-cover" src="${blog.image}" alt="">
             </div>
             <div class="p-3 flex flex-col justify-between h-full gap-2">
                 <div class="flex flex-col gap-2">
-                    <p class="font-semibold text-zinc-700 text-lg">${blog.title}</p>
-                    <p class="text-base text-zinc-600">${blog.subtitle}</p>
+                    <p class="font-semibold text-zinc-700 dark:text-zinc-300 text-lg">${blog.title}</p>
+                    <p class="text-base text-zinc-600 dark:text-zinc-300">${blog.subtitle}</p>
                 </div>
                 <div class="flex gap-4 items-center">
                     <div class="flex gap-2 items-center">
                         <img class="w-6 h-6 rounded-full object-cover" src="${blog.authorImage}" alt="">
-                        <p class="text-zinc-600">${blog.author}</p>
+                        <p class="text-zinc-600 dark:text-zinc-300">${blog.author}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <i class="text-blue-600 fa-solid fa-magnifying-glass"></i>
-                        <p class="text-zinc-600">${blog.date}</p>
+                        <p class="text-zinc-600 dark:text-zinc-300">${blog.date}</p>
                     </div>
                 </div>
             </div>
@@ -864,12 +864,12 @@ const testimonialContainer = document.getElementById("testimonials");
 
 testimonials.forEach(testimonial => {
     const testimonialHTML = `
-        <div class="border bg-white hover:shadow-xl">
-            <div class="border-b py-6 px-8 flex gap-4 items-center relative">
+        <div class="border bg-white dark:bg-slate-900 dark:border-slate-600 hover:shadow-xl">
+            <div class="border-b dark:border-b-slate-600 py-6 px-8 flex gap-4 items-center relative">
                 <img class="w-11 h-11 rounded-full object-cover" src="${testimonial.image}" alt="">
                 <div>
-                    <p class="font-semibold text-lg text-zinc-600">${testimonial.name}</p>
-                    <p class="text-zinc-500 font-regular">${testimonial.title}</p>
+                    <p class="font-semibold text-lg text-zinc-600 dark:text-zinc-300">${testimonial.name}</p>
+                    <p class="text-zinc-500 dark:text-zinc-300 font-regular">${testimonial.title}</p>
                 </div>
                 <i class="absolute right-[20%] bottom-[-17px] text-blue-500 text-3xl fa-solid fa-quote-right"></i>
             </div>
@@ -881,7 +881,7 @@ testimonials.forEach(testimonial => {
                     <i class=" text-blue-500 fa-solid fa-star"></i>
                     <i class=" text-blue-500 fa-solid fa-star"></i>
                 </div>
-                <p class="text-base text-zinc-500">${testimonial.testimonial}</p>
+                <p class="text-base text-zinc-500 dark:text-zinc-300">${testimonial.testimonial}</p>
             </div>
         </div>
     `;
