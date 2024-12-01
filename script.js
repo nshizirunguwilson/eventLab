@@ -8,19 +8,25 @@ const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 // icon toggling
 const iconToggle = () => {
-    moonIcon.classList.toggle("hidden");
-    sunIcon.classList.toggle("hidden");
+    if (moonIcon && sunIcon) {
+        moonIcon.classList.toggle("hidden");
+        sunIcon.classList.toggle("hidden");
+    }
 }
 
 // initial theme check
-const themCheck = () => {
+const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
-        moonIcon.classList.add("hidden");
-        return;
+        if (moonIcon) moonIcon.classList.add("hidden");
+        if (sunIcon) sunIcon.classList.remove("hidden");
+    } else {
+        document.documentElement.classList.remove("dark");
+        if (sunIcon) sunIcon.classList.add("hidden");
+        if (moonIcon) moonIcon.classList.remove("hidden");
     }
-    sunIcon.classList.add("hidden");
-}
+};
+
 
 // manual theme switch
 const themeSwitch = () => {
@@ -35,17 +41,22 @@ const themeSwitch = () => {
     iconToggle();
 }
 
-// call theme switch on clicking buttons
-sunIcon.addEventListener("click", () => {
-    themeSwitch();
-});
+// add event listeners if icons exist
+if (sunIcon) {
+    sunIcon.addEventListener("click", () => {
+        themeSwitch();
+    });
+}
 
-moonIcon.addEventListener("click", () => {
-    themeSwitch();
-});
+if (moonIcon) {
+    moonIcon.addEventListener("click", () => {
+        themeSwitch();
+    });
+}
 
-// invoke theme-switch on initial load
-themCheck();
+// invoke theme-check on initial load
+themeCheck();
+
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
