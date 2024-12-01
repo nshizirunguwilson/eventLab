@@ -379,11 +379,11 @@ const platform = document.getElementById("platform");
 
 eventPlatforms.forEach(eventPlatform => {
     const platformHTML = `
-        <div class="border rounded-md p-8 flex gap-2 items-center justify-center">
+        <div class="border dark:border-slate-600 rounded-md p-8 flex gap-2 items-center justify-center">
             <i class="${eventPlatform.icon} text-5xl text-blue-500"></i>
             <div>
-                <p class="text-zinc-700 font-bold text-3xl">${eventPlatform.amount}</p>
-                <p class="text-sm text-zinc-500">${eventPlatform.description}</p>
+                <p class="text-zinc-700 dark:text-zinc-300 font-bold text-3xl">${eventPlatform.amount}</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-300">${eventPlatform.description}</p>
             </div>
         </div>
     `;
@@ -423,11 +423,11 @@ how.forEach(how => {
     const workHTML = `
         <div class="flex flex-col gap-3 text-center items-center">
             <div class="w-[80px] h-[80px] bg-blue-500 rounded-full flex items-center justify-center">
-                <i class="${how.icon} text-4xl text-zinc-100"></i>
+                <i class="${how.icon} text-4xl text-zinc-100 dark:text-zinc-300"></i>
             </div>
             <div class="flex flex-col gap-2 items-center justify-center">
-                <span class="text-base text-zinc-700 font-semibold">${how.title}</span>
-                <p class="w-3/5 text-sm text-zinc-500">${how.description}</p>
+                <span class="text-base text-zinc-700 dark:text-zinc-300 font-semibold">${how.title}</span>
+                <p class="w-3/5 text-sm text-zinc-500 dark:text-zinc-300">${how.description}</p>
             </div>
         </div>
     `;
@@ -463,7 +463,7 @@ const featuredEvents = [
         location: "Dubai, UAE",
         price: "$150",
         organizerProfile: "https://www.nationalgeographic.com/content/dam/expeditions/destinations/europe/active/Alpe-Adria-trail/hero-alpe-adria.jpg.adapt.nineteen-hundred.jpg",
-        organizer: "Food & Drink Events"
+        organizer: "Kigali Heights"
     },
     {
         id: 4,
@@ -481,29 +481,29 @@ const featuredEventsContainer = document.getElementById("featuredEvents");
 
 featuredEvents.forEach(featuredEvent => {
     const featuredEventHTML = `
-        <div class="hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
+        <div class="hover:shadow-lg hover:shadow-blue-300 hover:shadow-slate-700 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-600">
             <div class="w-1/2 overflow-hidden">
                 <img class="h-[250px] w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredEvent.image}" alt="">
             </div>
             <div class="w-1/2 pt-4 pr-4 pl-4 flex flex-col justify-between">
                 <div class="content flex flex-col gap-2">
-                    <p class="font-semibold text-zinc-600 text-[20px]">${featuredEvent.title}</p>
+                    <p class="font-semibold text-zinc-600 dark:text-zinc-300 text-[20px]">${featuredEvent.title}</p>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-calendar-days text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">${featuredEvent.date}</p>
+                        <p class="text-[14px] text-zinc-600 dark:text-zinc-300">${featuredEvent.date}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-location-dot text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">${featuredEvent.location}</p>
+                        <p class="text-[14px] text-zinc-600 dark:text-zinc-300">${featuredEvent.location}</p>
                     </div>
-                    <p class="font-semibold text-zinc-700 uppercase">${featuredEvent.price}</p>
+                    <p class="font-semibold text-zinc-700 dark:text-zinc-300 uppercase">${featuredEvent.price}</p>
                 </div>
-                <div class="organizer border-t flex justify-between items-center py-2">
+                <div class="organizer border-t dark:border-t-slate-600 flex justify-between items-center py-2">
                     <div class="info flex gap-2 items-center">
                         <img class="w-8 object-cover h-8 rounded-full" src="${featuredEvent.organizerProfile}" alt="">
                         <div>
-                            <p class="text-[14px] text-zinc-500">Organized by</p>
-                            <p class="text-[15px] text-zinc-700 font-medium">${featuredEvent.organizer}</p>
+                            <p class="text-[14px] text-zinc-500 dark:text-zinc-400">Organized by</p>
+                            <p class="text-[15px] text-zinc-700 dark:text-zinc-300 font-medium">${featuredEvent.organizer}</p>
                         </div>
                     </div>
                     <div class="icons flex gap-3">
@@ -558,7 +558,7 @@ cities.forEach(city => {
     const cityHTML = `
         <div class=" ${city.class} cursor-pointer group/item overflow-hidden relative">
             <img class="w-full h-full object-cover group-hover/item:scale-110" src="${city.image}" alt="">
-            <div class=" flex gap-2 items-end p-3 justify-center w-full h-full absolute top-[100%] group-hover/item:top-0 left-0 bg-gradient-to-b from-transparent to-blue-500">
+            <div class=" flex gap-2 items-end p-3 justify-center w-full h-full absolute top-[100%] group-hover/item:top-0 left-0 bg-gradient-to-b from-transparent to-blue-500 dark:to-blue-900">
                 <span class="font-semibold text-lg text-zinc-100">${city.name}</span>
                 <p class="text-zinc-200">${city.events}</p>
             </div>
@@ -607,7 +607,7 @@ const organizersContainer = document.getElementById('organizers-container');
 
 organizers.forEach(organizer => {
     const organizerHTML = `
-        <button class="text-zinc-700 bg-zinc-200 hover:bg-blue-500 hover:text-zinc-200 px-4 py-2 rounded">${organizer.name}</button>
+        <button class="text-zinc-700 dark:text-zinc-300 bg-zinc-200 dark:bg-slate-700 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-zinc-200 px-4 py-2 rounded">${organizer.name}</button>
     `;
     organizersContainer.innerHTML += organizerHTML;
 })
@@ -660,27 +660,27 @@ const featuredOrganizersContainer = document.getElementById("featuredOrganizers"
 
 featuredOrganizers.forEach(featuredOrganizer => {
     const featuredOrganizerHTML = `
-        <div class="w-full h-full hover:shadow-lg hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border">
+        <div class="w-full h-full hover:shadow-lg dark:hover:shadow-slate-700 hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-600">
             <div class="w-1/2 overflow-hidden m-3">
                 <img class="h-full w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
             <div class="w-1/2 pt-2 pr-2 pl-2 flex flex-col justify-between">
                 <div class="content flex flex-col gap-1">
-                    <p class="font-semibold text-zinc-600 text-[17px]">${featuredOrganizer.title}</p>
+                    <p class="font-semibold text-zinc-600 dark:text-zinc-300 text-[17px]">${featuredOrganizer.title}</p>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-calendar-days text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">${featuredOrganizer.events}</p>
+                        <p class="text-[14px] text-zinc-600 dark:text-zinc-300">${featuredOrganizer.events}</p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-location-dot text-blue-600"></i>
-                        <p class="text-[14px] text-zinc-600">${featuredOrganizer.address}</p>
+                        <p class="text-[14px] text-zinc-600 dark:text-zinc-300">${featuredOrganizer.address}</p>
                     </div>
                 </div>
-                <div class="organizer border-t flex gap-3 items-center py-1">
-                    <div class="w-10 h-10 border flex items-center justify-center rounded-full">
+                <div class="organizer border-t dark:border-t-slate-600 flex gap-3 items-center py-1">
+                    <div class="w-10 h-10 border dark:border-slate-600 flex items-center justify-center rounded-full">
                         <i class="fa-solid fa-upload text-blue-500"></i>
                     </div>
-                    <div class="w-10 h-10 border flex items-center justify-center rounded-full">
+                    <div class="w-10 h-10 border dark:border-slate-600 flex items-center justify-center rounded-full">
                         <i class="fa-regular fa-heart text-blue-500"></i>
                     </div>
                 </div>
