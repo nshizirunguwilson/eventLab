@@ -58,6 +58,19 @@ if (moonIcon) {
 themeCheck();
 
 
+// working with responsive menu
+const menuOpen = document.getElementById("menuOpen");
+const menuClose = document.getElementById("menuClose");
+menuOpen.addEventListener("click", () => {
+    menuClose.classList.remove("hidden");
+    menuOpen.classList.add("hidden");
+});
+
+menuClose.addEventListener("click", () => {
+    menuClose.classList.add("hidden");
+    menuOpen.classList.remove("hidden");
+});
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
