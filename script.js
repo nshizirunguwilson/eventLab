@@ -94,12 +94,45 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     speed: 1000,
-    autoplay: true,
+    autoplay: {
+        delay: 3000, // Autoplay interval in milliseconds
+        disableOnInteraction: false, // Keep autoplay running after user interaction
+    },
     loop: true,
     grabCursor: true,
     slidesPerView: 8,
     spaceBetween: 20,
+
+    // Responsive breakpoints
+    breakpoints: {
+        // When the viewport is >= 320px
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+        },
+        // When the viewport is >= 480px
+        480: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+        },
+        // When the viewport is >= 768px
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        // When the viewport is >= 1024px
+        1024: {
+            slidesPerView: 6,
+            spaceBetween: 15,
+        },
+        // When the viewport is >= 1440px
+        1440: {
+            slidesPerView: 8,
+            spaceBetween: 20,
+        },
+    },
 });
+
 
 
 const events = [
@@ -662,7 +695,7 @@ const featuredOrganizers = [
     {
         id: 3, 
         title: "Bridal shower decoration",
-        image: "https://www.tamarindglobal.com/images/events/events.jpg",
+        image: "https://media-api.xogrp.com/images/555e4323-9728-448b-be88-370d25c4c8cf~rs_768.h-cr_2.0.1498.1496",
         events: "20 events",
         address: "Paris"
     },
