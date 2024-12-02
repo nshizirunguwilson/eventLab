@@ -223,7 +223,7 @@ events.forEach(event => {
                         <i class="fa-solid fa-up-right-and-down-left-from-center text-white"></i>
                     </div>
                 </div>
-                <p class="group-hover/item:text-blue-600 dark:text-zinc-300 text-center">${event.title}</p>
+                <p class="group-hover/item:text-blue-600 dark:text-zinc-300 text-center max-sm:text-sm">${event.title}</p>
             </div>
         `;
     eventsContainer.innerHTML += eventHTML;
@@ -546,11 +546,11 @@ const featuredEventsContainer = document.getElementById("featuredEvents");
 
 featuredEvents.forEach(featuredEvent => {
     const featuredEventHTML = `
-        <div class="hover:shadow-lg hover:shadow-blue-300 rounded-md overflow-hidden dark:hover:shadow-slate-700 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
-            <div class="w-1/2 overflow-hidden">
+        <div class="hover:shadow-lg hover:shadow-blue-300 rounded-md overflow-hidden dark:hover:shadow-slate-700 hover:cursor-pointer group/item mt-10 flex max-sm:flex-col border dark:border-slate-800">
+            <div class="w-1/2 max-sm:w-full overflow-hidden">
                 <img class="h-[250px] w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredEvent.image}" alt="">
             </div>
-            <div class="w-1/2 pt-4 pr-4 pl-4 flex flex-col justify-between">
+            <div class="w-1/2 max-sm:w-full pt-4 pr-4 pl-4 flex flex-col justify-between">
                 <div class="content flex flex-col gap-2">
                     <p class="font-semibold text-zinc-600 dark:text-zinc-300 text-[20px]">${featuredEvent.title}</p>
                     <div class="flex gap-2 items-center">
@@ -725,11 +725,11 @@ const featuredOrganizersContainer = document.getElementById("featuredOrganizers"
 
 featuredOrganizers.forEach(featuredOrganizer => {
     const featuredOrganizerHTML = `
-        <div class="w-full h-full hover:shadow-lg rounded-md overflow-hidden dark:hover:shadow-slate-700 hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex border dark:border-slate-800">
-            <div class="w-1/2 overflow-hidden m-3">
-                <img class="h-full w-full group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
+        <div class="w-full h-full hover:shadow-lg rounded-md overflow-hidden dark:hover:shadow-slate-700 hover:shadow-blue-300 hover:cursor-pointer group/item mt-10 flex max-sm:flex-col border dark:border-slate-800">
+            <div class="w-1/2 max-sm:w-full overflow-hidden m-3">
+                <img class="h-full w-full max-sm:aspect-video group-hover/item:scale-105 group-hover/item:saturate-150 object-cover" src="${featuredOrganizer.image}" alt="">
             </div>
-            <div class="w-1/2 pt-2 pr-2 pl-2 flex flex-col justify-between">
+            <div class="w-1/2 max-sm:w-full pt-2 pr-2 pl-2 flex flex-col justify-between">
                 <div class="content flex flex-col gap-1">
                     <p class="font-semibold text-zinc-600 dark:text-zinc-300 text-[17px]">${featuredOrganizer.title}</p>
                     <div class="flex gap-2 items-center">
@@ -876,8 +876,8 @@ const blogContainer = document.getElementById("blogs");
 
 blogs.forEach(blog => {
     const blogHTML = `
-        <div class="${blog.class} flex gap-3 rounded-md overflow-hidden border dark:border-slate-800 hover:shadow-lg hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer">
-            <div class="${blog.divImage}">
+        <div class="${blog.class} flex max-sm:flex-col gap-3 rounded-md overflow-hidden border dark:border-slate-800 hover:shadow-lg hover:bg-blue-50 dark:hover:bg-slate-800 cursor-pointer">
+            <div class="${blog.divImage} max-sm:w-full">
                 <img class="w-full h-full object-cover" src="${blog.image}" alt="">
             </div>
             <div class="p-3 flex flex-col justify-between h-full gap-2">

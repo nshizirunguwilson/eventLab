@@ -38,7 +38,7 @@
                 <i id="menuClose" class="text-blue-500 hidden text-2xl fa-solid fa-xmark"></i>
             </div>
             <div class="border max-sm:col-span-2 p-1 max-sm:flex max-sm:justify-between dark:border-slate-800 rounded group focus-within:ring-1 focus-within:ring-blue-500">
-                <input class="text-base font-regular bg-transparent text-zinc-700 dark:text-zinc-400" type="text" placeholder="Type your search...">
+                <input class="text-base max-sm:text-sm font-regular bg-transparent text-zinc-700 dark:text-zinc-400" type="text" placeholder="Type your search...">
                 <i class="fa-solid fa-magnifying-glass border-l dark:border-l-zinc-400 hover:cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800 text-blue-500 py-2 px-3"></i>
             </div>
         </div>
@@ -71,13 +71,13 @@
         <section class="h-screen relative" id="hero">
             <img class="h-full w-full object-cover brightness-[35%]" src="./assets/images/heroImage.png" alt="">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-3 items-center justify-center">
-                <p class="text-zinc-100 dark:text-zinc-300 font-medium">Journey to New Horizons</p>
-                <h1 class="uppercase font-semibold text-zinc-100 dark:text-zinc-300 text-7xl">find & promote upcoming <span class="font-semibold text-blue-500 text-7xl">events</span></h1>
+                <p class="text-zinc-100 dark:text-zinc-300 font-medium text-sm">Journey to New Horizons</p>
+                <h1 class="uppercase font-semibold text-zinc-100 dark:text-zinc-300 text-7xl max-sm:text-3xl ">find & promote upcoming <span class="font-semibold text-blue-500 text-7xl max-sm:text-3xl">events</span></h1>
                 <div class="flex max-sm:flex-col items-center bg-zinc-100 dark:bg-slate-500 bg-opacity-30 w-fit p-2 rounded-md gap-3">
                     <div class="flex bg-zinc-100 dark:bg-slate-900 rounded px-3 items-center">
-                        <div class="mr-3">
-                            <i class="text-blue-600 fa-solid fa-location-dot"></i>
-                            <select class="p-2 bg-transparent dark:text-zinc-400" name="" id="">
+                        <div class="mr-3 max-sm:flex max-sm:items-center">
+                            <i class="max-sm:text-sm text-blue-600 fa-solid fa-location-dot"></i>
+                            <select class="p-2 bg-transparent dark:text-zinc-400 max-sm:text-sm" name="" id="">
                                 <option value="">Event Location</option>
                                 <option value="">Kigali Arena</option>
                                 <option value="">Convention Center</option>
@@ -85,9 +85,9 @@
                             </select>
                         </div>
                         <span class="w-[1px] h-6 bg-blue-400"></span>
-                        <div class="ml-3">
-                            <i class="text-blue-600 fa-solid fa-layer-group"></i>
-                            <select class="p-2 bg-transparent dark:text-zinc-400" name="" id="">
+                        <div class="ml-3 max-sm:flex max-sm:items-center">
+                            <i class="max-sm:text-sm text-blue-600 fa-solid fa-layer-group"></i>
+                            <select class="p-2 bg-transparent dark:text-zinc-400 max-sm:text-sm" name="" id="">
                                 <option value="">Event Category</option>
                                 <option value="">Wedding</option>
                                 <option value="">Anniversary</option>
@@ -95,8 +95,8 @@
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <button class="max-sm:w-full bg-blue-600 rounded text-zinc-100 hover:bg-blue-500 py-2 px-3 cursor-pointer">Search Now</button>
+                    <div class="max-sm:w-full">
+                        <button class="max-sm:text-sm bg-blue-600 rounded text-zinc-100 hover:bg-blue-500 py-2 px-3 cursor-pointer">Search Now</button>
                     </div>
                 </div>
                 <p class="text-sm text-zinc-100 dark:text-zinc-300">All, Online, Today, This weekend, Free, Food & Drink, Charity & Causes</p>
@@ -104,7 +104,7 @@
         </section>
         <section id="events" class="px-[10%] max-sm:px-[5%] py-10 dark:bg-slate-900">
             <div class="swiper">
-                <div class="swiper-wrapper" id="events-container">
+                <div class="swiper-wrapper max-sm:text-sm" id="events-container">
                     <!-- Slides -->
                 </div>
             </div>
@@ -228,7 +228,7 @@
                 <p class="text-sm bg-zinc-100 text-zinc-600 rounded w-fit px-3 py-1 dark:bg-slate-700 dark:text-zinc-300">Partners</p>
                 <h1 class="text-center font-semibold capitalize text-4xl text-zinc-700 dark:text-zinc-400">Our <span class="text-blue-600 text-4xl">Partners</span></h1>
             </div>
-            <div id="partners" class="mt-10 flex max-sm:flex-col max-sm:gap-4 items-center justify-between">
+            <div id="partners" class="mt-10 flex max-sm:flex-wrap max-sm:gap-4 items-center justify-between">
                 <img src="./assets/images/partners/logoipsum-236.svg" alt="">
                 <img src="./assets/images/partners/logoipsum-253.svg" alt="">
                 <img src="./assets/images/partners/logoipsum-254.svg" alt="">
