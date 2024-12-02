@@ -621,7 +621,7 @@ const cityContainer = document.getElementById("cities");
 
 cities.forEach(city => {
     const cityHTML = `
-        <div class=" ${city.class} cursor-pointer rounded-lg overflow-hidden group/item overflow-hidden relative">
+        <div class=" ${city.class} max-sm:h-[250px] max-sm:w-full max-sm:col-span-1 max-sm:row-span-1 cursor-pointer rounded-lg overflow-hidden group/item overflow-hidden relative">
             <img class="w-full h-full object-cover group-hover/item:scale-110" src="${city.image}" alt="">
             <div class=" flex gap-2 items-end p-3 justify-center w-full h-full absolute top-[100%] group-hover/item:top-0 left-0 bg-gradient-to-b from-transparent to-blue-500 dark:to-blue-900">
                 <span class="font-semibold text-lg text-zinc-100">${city.name}</span>
