@@ -42,28 +42,28 @@
                 <i class="fa-solid fa-magnifying-glass border-l dark:border-l-zinc-400 hover:cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800 text-blue-500 py-2 px-3"></i>
             </div>
         </div>
-        <div id="menu" class="flex max-sm:fixed max-sm:w-full max-sm:h-screen max-sm:bg-slate-900 dark:max-sm:bg-slate-500 max-sm:bg-opacity-90 dark:max-sm:bg-opacity-90 max-sm:left-[100%] max-sm:top-0 max-sm:p-[5%] max-sm:flex-col items-center max-sm:justify-center gap-8">
+        <div id="menu" class="flex max-sm:fixed max-sm:w-full max-sm:h-screen max-sm:bg-slate-950 dark:max-sm:bg-slate-950 max-sm:bg-opacity-90 dark:max-sm:bg-opacity-90 max-sm:left-[100%] max-sm:top-0 max-sm:p-[5%] max-sm:flex-col items-center max-sm:justify-center gap-8">
             <div class="flex max-sm:flex-col max-sm:items-start gap-4 items-center">
-                <div class="flex items-center group/item gap-2 cursor-pointer">
+                <div class="menuBtn flex items-center group/item gap-2 cursor-pointer">
                     <i class="fa-solid fa-house text-blue-600"></i>
                     <span class="text-zinc-700 dark:text-zinc-400 group-hover/item:underline">Home</span>
                 </div>
-                <div class="flex items-center group/item gap-2 cursor-pointer">
+                <div class="menuBtn flex items-center group/item gap-2 cursor-pointer">
                     <i class="fa-solid fa-heart text-blue-600"></i>
                     <span class="text-zinc-700 dark:text-zinc-400 group-hover/item:underline">Favorite</span>
                 </div>
-                <div class="flex items-center group/item gap-2 cursor-pointer">
+                <div class="menuBtn flex items-center group/item gap-2 cursor-pointer">
                     <i class="fa-solid fa-user text-blue-600"></i>
                     <span class="text-zinc-700 dark:text-zinc-400 group-hover/item:underline">Profile</span>
                 </div>
-                <div class="bg-blue-600 text-zinc-100 dark:text-zinc-300 py-2 px-3 rounded hover:bg-blue-500 cursor-pointer">
+                <div class="menuBtn bg-blue-600 text-zinc-100 dark:text-zinc-300 py-2 px-3 rounded hover:bg-blue-500 cursor-pointer">
                     <span>Buy Tickets</span>
                     <i class="fa-solid fa-ticket rotate-90"></i>
                 </div>
             </div>
             <div class="w-6 overflow-hidden">
-                <i onclick="handleDarkMode()" id="moon" class="fa-solid fa-moon text-blue-600 text-2xl cursor-pointer"></i>
-                <i onclick="handleLightMode()" id="sun" class="fa-solid fa-sun hidden text-blue-600 text-2xl cursor-pointer slide"></i>
+                <i onclick="handleDarkMode()" id="moon" class="menuBtn fa-solid fa-moon text-blue-600 text-2xl cursor-pointer"></i>
+                <i onclick="handleLightMode()" id="sun" class="menuBtn fa-solid fa-sun hidden text-blue-600 text-2xl cursor-pointer slide"></i>
             </div>
         </div>
     </header>

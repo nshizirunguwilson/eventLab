@@ -69,12 +69,26 @@ menuOpen.addEventListener("click", () => {
     menu.classList.add("max-sm:left-0");
 });
 
-menuClose.addEventListener("click", () => {
+// Define the reusable function
+const toggleMenu = () => {
     menuClose.classList.add("hidden");
     menuOpen.classList.remove("hidden");
     menu.classList.add("max-sm:left-[100%]");
     menu.classList.remove("max-sm:left-0");
-});
+};
+
+// Attach the toggleMenu function to menuClose click
+menuClose.addEventListener("click", toggleMenu);
+
+const menuBtns = document.getElementsByClassName("menuBtn");
+
+// Attach the toggleMenu function to each menuBtn click
+for (let i = 0; i < menuBtns.length; i++) {
+    menuBtns[i].addEventListener("click", () => {
+        console.log(`Menu button ${i} clicked!`);
+        toggleMenu(); // Call the toggleMenu function
+    });
+}
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
