@@ -61,14 +61,19 @@ themeCheck();
 // working with responsive menu
 const menuOpen = document.getElementById("menuOpen");
 const menuClose = document.getElementById("menuClose");
+const menu = document.getElementById("menu");
 menuOpen.addEventListener("click", () => {
     menuClose.classList.remove("hidden");
     menuOpen.classList.add("hidden");
+    menu.classList.remove("max-sm:left-[100%]");
+    menu.classList.add("max-sm:left-0");
 });
 
 menuClose.addEventListener("click", () => {
     menuClose.classList.add("hidden");
     menuOpen.classList.remove("hidden");
+    menu.classList.add("max-sm:left-[100%]");
+    menu.classList.remove("max-sm:left-0");
 });
 
 const swiper = new Swiper('.swiper', {
