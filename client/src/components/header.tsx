@@ -13,8 +13,16 @@ export default function Header() {
   }
 
   const handleThemeToggle = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-    toast.success(`Switched to ${theme === 'dark' ? 'light' : 'dark'} mode`)
+    if (theme === 'light') {
+      setTheme('dark')
+      toast.success('Switched to dark mode')
+    } else if (theme === 'dark') {
+      setTheme('system')
+      toast.success('Switched to system mode')
+    } else {
+      setTheme('light')
+      toast.success('Switched to light mode')
+    }
   }
 
   const handleMenuClick = (action: string) => {
@@ -86,9 +94,11 @@ export default function Header() {
         <div className="w-6 overflow-hidden">
           <i 
             className={`text-blue-600 text-2xl cursor-pointer fa-solid ${
-              theme === 'dark' ? 'fa-sun' : 'fa-moon'
+              theme === 'dark' ? 'fa-sun' : 
+              theme === 'light' ? 'fa-moon' : 'fa-desktop'
             }`}
             onClick={handleThemeToggle}
+            title={`Current: ${theme} mode`}
           ></i>
         </div>
       </div>

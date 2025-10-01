@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'EventLab | Your online ticket booking system',
   description: 'Find & promote upcoming events',
+}
+
+export const viewport: Viewport = {
   themeColor: '#1D4ED8',
 }
 

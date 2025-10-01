@@ -201,14 +201,3 @@ This project is licensed under the MIT License.
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
-
-## 📞 Support
-
-For support or questions:
-
-- Email: `wilson.codecraft@gmail.com`
-- Phone: (+250)791-847-408
-
----
-
-Built with ❤️ using Next.js and modern web technologies.
